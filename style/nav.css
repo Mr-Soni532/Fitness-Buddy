@@ -1,0 +1,16 @@
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+}
+.logo>img{
+    width: 60%;
+    cursor: pointer;
+}
+.nav > .login{
+font-weight: 700;
+line-height: 14px;
+font-size: 14px;
+cursor: pointer;
+}
