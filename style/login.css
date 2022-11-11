@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.nav_bar {
+    width: 100%;
+    background: #2a90d5;
+    height: 45px;
+    display: flex;
+    align-items: center;
+
+}
+
+.nav_menu {
+    width: 100%;
+    height: 100%;
+}
+
+.nav_menu>a {
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 21px;
+    padding: 0 16px;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 0.8px;
+}
+
+/* -------- login form */
+.form_container {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+form {
+    width: 25%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 48px 64px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+
+}
+
+form>h1 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    margin-bottom: 28px;
+    text-align: center;
+}
+
+form>a {
+    color: #2a90d5;
+    text-decoration: none;
+}
+
+form>input[type='submit'], form>button {
+    align-items: center;
+    background-color: #2a90d5;
+    border: none;
+    border-radius: 4px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.25px;
+    line-height: 24.5px;
+    margin: 20px 0px 8px;
+    padding: 12px 20px;
+    text-align: center;
+}
+form>button{
+    background: #4267b2;
+}
+input {
+    line-height: 23px;
+    padding: 16.5px 14px;
+    margin: 5px 0;
+    border: 0.5px solid rgb(198, 195, 195);
+    border-radius: 5px;
+    font-size: 16px;
+}
+input:focus{
+    outline: 2px solid #2a90d5;
+}
+
+form>p {
+    text-align: center;
+    color: grey;
+}
+
+form>button>span {
+    padding: 1px 3px 0px 8px;
+    background: white;
+    color: #4267b2;
+    font-weight: 700;
+    font-size: 16px;
+    border-radius: 3px;
+    margin-right: 20px;
+}
+.signin_message{
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    color: grey;
+}
+.signin_message>a{
+    text-decoration: none;
+    color:#2a90d5;
+}
+#navigation-2{
+width: 100%;
+display: flex;
+justify-content: space-around;
+}
