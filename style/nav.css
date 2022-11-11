@@ -1,16 +1,34 @@
-.nav{
+
+
+.nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  
 }
-.logo>img{
+
+.container {
+    width: 65%;
+    margin: auto;
+}
+
+.logo>img {
     width: 60%;
     cursor: pointer;
+    margin-left: 16px;
 }
-.nav > .login{
-font-weight: 700;
-line-height: 14px;
-font-size: 14px;
-cursor: pointer;
+
+.nav>.login {
+    font-weight: 700;
+    line-height: 14px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-right: 16px;
+}
+
+#top {
+    height: 50px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.001) 0px 1px 1px 0px;
+    margin: auto;
+    display: flex;
+    align-items: center;
 }
