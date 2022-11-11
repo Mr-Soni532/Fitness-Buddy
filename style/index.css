@@ -20,7 +20,6 @@
     align-items: center;
 }
 
-#middle {}
 
 /* ----------middle-1 */
 
@@ -236,7 +235,7 @@
 .vs_container {
     width: 90%;
     margin: auto;
-    overflow-x: scroll;
+    overflow-x: hidden;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 10px 5px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 
@@ -301,7 +300,6 @@
     border-radius: 50%;
     margin: 6px;
     cursor: pointer;
-    background: blue;
 }
 
 .middle-4>button {
@@ -479,4 +477,10 @@
 #lang{
     position: absolute;
     right:50px;
+}
+.active{
+    background: #2a90d5;
+}
+.inactive{
+    background: white;
 }
