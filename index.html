@@ -7,6 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="style/index.css">
 	<link rel="stylesheet" href="style/nav.css">
+	<link rel="stylesheet" href="style/footer.css">
 	<link rel="stylesheet" href="script/index.js">
 	<script src="script/index.js" defer></script>
 	<title>Document</title>
@@ -20,9 +21,9 @@
 				<div class="logo">
 					<img src="Resource/Fitness_logo.png" alt="">
 				</div>
-				<div class="login">
-					LOG IN
-				</div>
+				<a class="login" href="#">
+                    LOG IN
+                </a>
 			</div>
 		</div>
 	</section>
@@ -136,7 +137,7 @@
 					</span>
 				</div>
 				<div class="dots">
-					<div id="D1"></div>
+					<div id="D1" class="active"></div>
 					<div id="D2"></div>
 					<div id="D3"></div>
 				</div>
@@ -201,7 +202,7 @@
 		</div>
 	</section>
 	<section id="footer">
-		<select name="lang" id="lang">
+		<select name="lang" id="lang" onchange="handleLang(this)">
 			<option value="en">English</option>
 			<option value="fr">French</option>
 			<option value="af">Africans</option>

@@ -20,7 +20,6 @@
     align-items: center;
 }
 
-#middle {}
 
 /* ----------middle-1 */
 
@@ -236,7 +235,7 @@
 .vs_container {
     width: 90%;
     margin: auto;
-    overflow-x: scroll;
+    overflow-x: hidden;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 10px 5px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 
@@ -301,7 +300,6 @@
     border-radius: 50%;
     margin: 6px;
     cursor: pointer;
-    background: blue;
 }
 
 .middle-4>button {
@@ -432,51 +430,14 @@
 }
 
 /* -------- FOOTER */
-#footer {
-    background-color: #F6F6F8;
-    padding: 20px;
-    position: relative;
-}
 
-.navigation {
-    width: 70%;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 8px;
-}
-.navigation>a{
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 21px;
-    padding: 0 16px;
-    text-align: center;
-    color: black;
-    text-decoration: none;
-}
-.navigation-2{
-    width: 50%;
-    margin: auto;
-    margin-bottom: 8px;
-}
-.navigation-3{
-    width: 40%;
-    margin: auto;
-    text-align: center;
-    margin-bottom: 8px;
-}
-.navigation-2>a, .navigation-3>a{
-    color: #2a90d5;
-    font-size: 11px;
-    line-height: 18px;
-    text-align: center;
-    text-decoration: none;
-}
-.copyright{
-    text-align: center;
-    font-size: 12px;
-}
 #lang{
     position: absolute;
     right:50px;
+}
+.active{
+    background: #2a90d5;
+}
+.inactive{
+    background: white;
 }

@@ -1,5 +1,10 @@
 let track = document.querySelector('.vs_track')
 let slides = Array.from(track.children);
+let dots = document.querySelector('.dots')
+dots = Array.from(dots.children)
+console.log(dots)
+document.querySelector('#leftArrow').addEventListener('click',handlePrev)
+document.querySelector('#rightArrow').addEventListener('click',handleNext)
 let index = 1;
 let slideId;
 
@@ -15,12 +20,25 @@ slides = Array.from(track.children);
 function moveSlide() {
     const slideWidth = slides[index].clientWidth;
     track.style.transform = `translateX(-` + slideWidth * index + `px)`;
+    updateDot()
 }
 moveSlide()
+function updateDot(){
+    dots.forEach(el => {
+        if(el.id == `D${index}`){
+            el.setAttribute('class', 'active')
+        } else {
+            el.setAttribute('class', 'inactive')
+            
+
+        }
+    });
+}
 function moveToNextSlide() {
     if (index > slides.length) return;
     index++;
     moveSlide();
+    
     track.style.transition = "1s";
 }
 function moveToPrevSlide() {
@@ -40,9 +58,8 @@ function handleNext(e) {
 setInterval(moveToNextSlide, 3000);
 // !----------| Transitionend |------------|
 track.addEventListener('transitionend', () => {
-    console.log(slides[index].id)
+    
     if (slides[index].id === 'first-clone') {
-        console.log('hogi')
         index = 1;
         track.style.transition = "none";
         moveSlide();
@@ -53,3 +70,7 @@ track.addEventListener('transitionend', () => {
         moveSlide();
     }
 })
+// console.log(document.querySelector('html').lang)
+function handleLang(e){
+    document.querySelector('html').lang = e.value;
+}
