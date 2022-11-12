@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style/nav.css">
     <link rel="stylesheet" href="/style/signin_welcome.css">
+    <script src="/script/customer_details.js"></script>
     <title>Weight</title>
 </head>
+
 <body>
     <section id="top">
         <!-- --------Navbar------ -->
         <div class="container">
             <div class="nav">
-                <div class="logo">
+                <a class="logo" href="/index.html">
                     <img src="/Resource/Fitness_logo.png" alt="">
-                </div>
+                </a>
             </div>
     </section>
     <section id="question_card_container">
@@ -23,12 +26,12 @@
             <div class="card">
                 <h1>What is you weight goal?</h1>
                 <select name="" id="goal">
-                    <option value="">Select Your Goal</option>
+                    <option value="" selected disabled>Select Your Goal</option>
                     <option value="lose">Lose Weight</option>
                     <option value="maintain">Maintain Weight</option>
                     <option value="gain">Gain Weight</option>
                 </select>
-                    <button>CONTINUE</button>
+                <button onclick="handleGoal()">CONTINUE</button>
             </div>
         </div>
     </section>

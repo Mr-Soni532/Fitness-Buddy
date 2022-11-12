@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="style/nav.css">
     <link rel="stylesheet" href="style/login.css">
     <link rel="stylesheet" href="style/footer.css">
+    <script src="script/auth.js"></script>
 </head>
 
 <body>
@@ -19,7 +20,7 @@
                 <div class="logo">
                     <img src="Resource/Fitness_logo.png" alt="">
                 </div>
-                <a class="login" href="#">
+                <a class="login" href="signin_welcome.html">
                     SIGN IN
                 </a>
             </div>
@@ -28,16 +29,16 @@
     
     <!-- --------Login form------ -->
     <div class="form_container">
-        <form action="">
+        <form action="" id="loginForm">
             <h1>Member Login</h1>
-            <input type="email" placeholder="Email Address">
-            <input type="password" placeholder="Password">
+            <input type="email" placeholder="Email Address" id="lemail" required>
+            <input type="password" placeholder="Password" required minlength="6" id="lpassword">
             <a href="#">Forgot password?</a>
-            <input type="submit" value="LOG IN">
+            <input type="submit" value="LOG IN" >
             <p>or</p>
             <button> <span id="flogo">f</span> CONTINUE WITH FACEBOOK</button>
         </form>
-        <p class="signin_message">Not a member yet? <a href="#">Sign up now!</a></p>
+        <p class="signin_message">Not a member yet? <a href="signin_welcome.html">Sign up now!</a></p>
     </div>
     <!-- --------- footer --------` -->
     <section id="footer">
@@ -61,5 +62,8 @@
 		</div>
 	</section>
 </body>
-
+<script>
+    document.querySelector('#loginForm').addEventListener('submit', loginData)
+    // console.log(auth)
+</script>
 </html>

@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style/nav.css">
     <link rel="stylesheet" href="/style/signin_welcome.css">
+    <script src="/script/customer_details.js"></script>
     <title>Weight</title>
 </head>
 
@@ -15,9 +16,9 @@
         <!-- --------Navbar------ -->
         <div class="container">
             <div class="nav">
-                <div class="logo">
+                <a class="logo" href="/index.html">
                     <img src="/Resource/Fitness_logo.png" alt="">
-                </div>
+                </a>
 
             </div>
     </section>
@@ -26,7 +27,7 @@
             <div class="card">
                 <h1>Create your username.</h1>
                 <input type="text" minlength="5" id="username" placeholder="Enter Your Username">
-                <button>CONTINUE</button>
+                <button onclick="handleUsername()">CONTINUE</button>
             </div>
         </div>
     </section>

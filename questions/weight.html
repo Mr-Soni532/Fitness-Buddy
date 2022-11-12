@@ -1,30 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style/nav.css">
     <link rel="stylesheet" href="/style/signin_welcome.css">
-    <title>Weight</title>
+    <script src="/script/customer_details.js"></script>
+    <title>Weight & Height</title>
 </head>
+
 <body>
     <section id="top">
         <!-- --------Navbar------ -->
         <div class="container">
             <div class="nav">
-                <div class="logo">
+                <a class="logo" href="/index.html">
                     <img src="/Resource/Fitness_logo.png" alt="">
-                </div>
-                
+                </a>
             </div>
     </section>
     <section id="question_card_container">
         <div class="card_container">
             <div class="card">
                 <h1>What is you current weight?</h1>
-                <input type="number" min="0" value="0" id="weight">
-                <button>CONTINUE</button>
+                <input type="number" min="16" max="90"  id="weight" placeholder="Enter Your weight in kg">
+                <h1>What is you current height?</h1>
+                <input type="number" min="120"  id="height" placeholder="Enter your height in cm">
+
+                <button onclick="handleHW()">CONTINUE</button>
             </div>
         </div>
     </section>

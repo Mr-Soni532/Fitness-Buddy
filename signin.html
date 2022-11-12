@@ -8,6 +8,7 @@
     <title>Sign In</title>
     <link rel="stylesheet" href="style/nav.css">
     <link rel="stylesheet" href="style/signin.css">
+    <script src="script/auth.js"></script>
 </head>
 
 <body>
@@ -15,10 +16,10 @@
         <!-- --------Navbar------ -->
         <div class="container">
             <div class="nav">
-                <div class="logo">
+                <a class="logo" href="index.html">
                     <img src="Resource/Fitness_logo.png" alt="">
-                </div>
-                <a class="login" href="#">
+                </a>
+                <a class="login" href="login.html">
                     LOG IN
                 </a>
             </div>
@@ -29,16 +30,17 @@
     <div class="form_container">
         <form action="" id="signinForm">
             <h1>Almost there! Create your account.</h1>
-            <input type="email" placeholder="Email Address">
-            <input type="password" placeholder="Password" minlength="10">
+            <input type="email" placeholder="Email Address" id="cEmail" required>
+            <input type="password" placeholder="Password" minlength="6" id="cPassword" required>
             <p>Must be at least 10 characters, no spaces.</p>
             <div id="checkbox">
-                <input type="checkbox">
+                <input type="checkbox" id="check" value="yes">
                 <label for="">Terms and Condtition</label>
                 <p>I agree to MyFitnessPal's <span>Terms & Conditions</span> and <span>Privacy Policy</span>.</p>
             </div>
-            <p>By signing up for MyFitnessPal, you are agreeing to our <span>Privacy Policy</span> and <span>Terms</span>.</p>
-            <input type="submit" value="CONTINUE">
+            <p>By signing up for MyFitnessPal, you are agreeing to our <span>Privacy Policy</span> and
+                <span>Terms</span>.</p>
+            <input type="submit" value="CONTINUE" id="submitBtn">
             <p>or</p>
             <button> <span id="flogo">f</span> CONTINUE WITH FACEBOOK</button>
             <p>We will never post anything without your permission</p>
@@ -48,5 +50,9 @@
     </div>
     <!-- --------- footer --------` -->
 </body>
-
+<script>
+    document.querySelector('#signinForm').addEventListener('submit', signinData)
+    document.querySelector('#check').addEventListener('click', submitBtn)
+    submitBtn()
+</script>
 </html>

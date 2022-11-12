@@ -19,7 +19,7 @@ body {
 }
 
 .card_container {
-    width: 25%;
+    width: 23%;
     height: 100%;
     margin: auto;
     margin-top: 50px;
@@ -44,19 +44,28 @@ body {
     line-height: 28px;
     text-align: center;
 }
-
+#active>p{
+    text-align: center;
+    color: #8e8e93;
+    margin-top: 20px;
+}
 .card>button {
-    margin-top: 30px;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 20px;
     width: 100%;
     background: #2a90d5;
     border: none;
     border-radius: 4px;
     color: white;
-    font-size: 14px;
-    font-weight: 500;
+    font-size: 16px;
+    font-weight: 700;
     letter-spacing: 0.25px;
     padding: 15px;
     cursor: pointer;
+}
+.card>a:hover{
+    background: #1f618d;
 }
 
 .card>button:hover {
@@ -73,6 +82,7 @@ input, select{
     font-weight: 500;
     font-size: 20px;
     margin-top: 30px;
+    margin-bottom: 30px;
     outline-color: #8e8e93;
     outline: 1px solid grey;
     border-radius: 5px;

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style/nav.css">
+  <!-- <link rel="stylesheet" href="style/home.css"> -->
+  <link rel="stylesheet" href="style/footer.css">
+  <link rel="stylesheet" href="style/food.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
+  <title>Add Food</title>
+</head>
+
+<body>
+  <section id="top">
+    <!-- --------Navbar------ -->
+    <div class="container">
+      <div class="nav loged">
+        <a class="logo ">
+          <img src="Resource/Fitness_logo.png" alt="">
+        </a>
+        <ul class="logedin">
+
+          <li id="username">Hi,<span id="username">Amiclone</span></li>
+          <li><span class="material-symbols-outlined">
+              mail
+            </span>
+            <span>
+              1
+            </span>
+          </li>
+          <li><span class="material-symbols-outlined">
+              person
+            </span>
+            <span>
+              0
+            </span>
+          </li>
+          <li><a href="#">Help</a></li>
+          <li><a href="#">Settings</a></li>
+          <li><a href="#">Log Out</a></li>
+          <li>Follow Us:</li>
+          <li><img src="/Resource/facebook.png" alt=""></li>
+          <li><img src="/Resource/twitter.png" alt=""></li>
+        </ul>
+      </div>
+  </section>
+  <!-- --------Nav Menu------ -->
+  <div class="nav_bar">
+    <div class="container">
+      <div class="nav_menu">
+        <a href="home.html">HOME</a>
+        <a href="food.html">FOOD</a>
+        <a href="#">EXERCISE</a>
+        <a href="#">APPS</a>
+        <a href="#">COMMUNITY</a>
+        <a href="#">BLOG</a>
+        <a href="#">PREMIUM</a>
+      </div>
+    </div>
+  </div>
+  <section id="main">
+    <div class="container">
+      <div class="food_table">
+        <table>
+          <thead>
+            <tr>
+              <th>Categories
+              </th>
+              <th>Calories<br><span>Kcal</span></th>
+              <th>Fat<br><span>g</span></th>
+              <th>Protein<br><span>g</span></th>
+              <th>Carbs<br><span>g</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span>Breakfast</span>
+                <input type="text" placeholder="Breakfast here" required id="breakfast">
+                <input type="number" placeholder="Quantity" required id="bQuantity" value="0" min="0" max="9"
+                  onKeyDown="return false">
+              </td>
+              <td id="bcalories">0</td>
+              <td id="bfat">0</td>
+              <td id="bprotein">0</td>
+              <td id="bcarbs">0</td>
+
+            </tr>
+            <tr>
+              <td><span>Lunch</span>
+                <input type="text" placeholder="Lunch here" required id="lunch">
+                <input type="number" placeholder="Quantity" required id="lQuantity" value="0" min="0" max="9"
+                  onKeyDown="return false">
+              </td>
+              <td id="lcalories">0</td>
+              <td id="lfat">0</td>
+              <td id="lprotein">0</td>
+              <td id="lcarbs">0</td>
+            </tr>
+            <tr>
+              <td><span>Dinner</span>
+                <input type="text" placeholder="Dinner here" required id="dinner">
+                <input type="number" placeholder="Quantity" required id="dQuantity" value="0" min="0" max="9"
+                  onKeyDown="return false">
+              </td>
+              <td id="dcalories">0</td>
+              <td id="dfat">0</td>
+              <td id="dprotein">0</td>
+              <td id="dcarbs">0</td>
+            </tr>
+            <tr>
+              <td><span>Snacks</span>
+                <input type="text" placeholder="Snacks here" required id="snacks">
+                <input type="number" placeholder="Quantity" required id="sQuantity" value="0" min="0" max="9"
+                  onKeyDown="return false">
+              </td>
+              <td id="scalories">0</td>
+              <td id="sfat">0</td>
+              <td id="sprotein">0</td>
+              <td id="scarbs">0</td>
+            </tr>
+          </tbody>
+        </table>
+        <div>
+          <div>
+            <p>Once You done with inputs, make sure to update the table.</p>
+            <button onclick="handleUpdate()">Update Table</button>
+          </div>
+          <table class="totalData">
+            <tbody>
+              <tr>
+                <td>Total</td>
+                <td id="tcalories">0</td>
+                <td id="tfat">0</td>
+                <td id="tprotein">0</td>
+                <td id="tcarbs">0</td>
+              </tr>
+              <tr>
+                <td>Your Daily Goal</td>
+                <td id="goal-calories">0</td>
+                <td id="goal-fat">0</td>
+                <td id="goal-protein">0</td>
+                <td id="goal-carbs">0</td>
+              </tr>
+              <tr>
+                <td>Remaining</td>
+                <td id="rcalories">0</td>
+                <td id="rfat">0</td>
+                <td id="rprotein">0</td>
+                <td id="rcarbs">0</td>
+              </tr>
+              <tr>
+                <th>Categories
+                </th>
+                <th>Calories<br><span>g</span></th>
+                <th>Fat<br><span>g</span></th>
+                <th>Protein<br><span>g</span></th>
+                <th>Carbs<br><span>g</span></th>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="water_container">
+        <div>
+          <div>
+            <h3>Water Consumption</h3>
+            <h4>Today's Water Total</h4>
+            <p>Aim to drink at least 8 cups of water today. You can quick add common sizes or enter a custom
+              amount.</p>
+            <h4>Quick Add</h4>
+            <ul id="quickAdd">
+              <li id="add1">+1 cup</li>
+              <li id="add2">+2 cup</li>
+              <li id="add3">+3 cup</li>
+            </ul>
+            <h4>Add Custom</h4>
+            <input type="number">
+            <span>cups</span>
+            <button>Add</button>
+          </div>
+          <div>
+            <h4><span id="count">1</span> cups</h4>
+            <img src="Resource/water_glass/empty.png" alt="">
+          </div>
+        </div>
+        <div>
+          <h4>Today's Food Notes</h4>
+          <input type="textarea" size="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --------- footer --------` -->
+  <section id="footer">
+    <div class="container">
+      <div class="navigation-2" id="navigation-2">
+        <a href="home.html">Calories</a>
+        <a href="#">Blog</a>
+        <a href="#">Terms</a>
+        <a href="#">privacy</a>
+        <a href="#">Contact Us</a>
+        <a href="#">APi</a>
+        <a href="#">Jobs</a>
+        <a href="#">Feedback</a>
+        <a href="#">Community Guidelines</a>
+        <a href="#">Ad Choice</a>
+        <a href="#">Do Not Sell My Personal Information</a>
+      </div>
+      <div class="copyright">
+        &#169 2020 fitnessbuddy,Inc.
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>
