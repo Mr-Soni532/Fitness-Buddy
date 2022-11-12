@@ -6,16 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style/nav.css">
     <link rel="stylesheet" href="/style/signin_welcome.css">
-    <title>Weight</title>
+    <script src="/script/customer_details.js"></script>
+    <title>age</title>
 </head>
 <body>
     <section id="top">
         <!-- --------Navbar------ -->
         <div class="container">
             <div class="nav">
-                <div class="logo">
+                <a class="logo" href="/index.html">
                     <img src="/Resource/Fitness_logo.png" alt="">
-                </div>
+                </a>
                 
             </div>
     </section>
@@ -23,10 +24,13 @@
         <div class="card_container">
             <div class="card">
                 <h1>What is you age?</h1>
-                <input type="number" min="0" value="0" id="age">
-                <button>CONTINUE</button>
+                <input type="number" min="0" placeholder="Enter Your age in years" id="age">
+                <button onclick="handleAge()">CONTINUE</button>
             </div>
         </div>
     </section>
 </body>
+<script>
+    
+</script>
 </html>

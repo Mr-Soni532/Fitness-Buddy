@@ -15,11 +15,8 @@
         <!-- --------Navbar------ -->
         <div class="container">
             <div class="nav">
-                <div class="logo">
+                <a class="logo" href="index.html">
                     <img src="Resource/Fitness_logo.png" alt="">
-                </div>
-                <a class="login" href="#">
-                    LOG IN
                 </a>
             </div>
     </section>
@@ -27,10 +24,14 @@
         <div class="card_container">
             <div class="card">
                 <h1>Welcome! Just a few quick questions so we can customize MyFitnessPal for you.</h1>
-                <button>CONTINUE</button>
+                <button onclick="goNext()">CONTINUE</button>
             </div>
         </div>
     </section>
 </body>
-
+<script>
+    function goNext(){
+        window.location.href = 'questions/weight.html'
+    }
+</script>
 </html>

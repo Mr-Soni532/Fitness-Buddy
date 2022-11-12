@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/style/nav.css">
     <link rel="stylesheet" href="/style/signin_welcome.css">
     <script src="/script/customer_details.js"></script>
-    <title>Details</title>
+    <title>Weight</title>
 </head>
 
 <body>
@@ -23,17 +23,18 @@
     </section>
     <section id="question_card_container">
         <div class="card_container">
-            <div class="card" id="details">
-                <h1>Please select which sex we should use to calculate your calorie needs.</h1>
-                <select name="" id="gender">
-                    <option value="" selected disabled>Select Your Gender</option>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
+            <div class="card" id="active">
+                <h1>What is your baseline activity level?</h1>
+                <p>Not including workouts–we count that separately</p>
+                <select name="" id="activity">
+                    <option value="" selected disabled>Select Your Activity Level</option>
+                    <option value="1">Not Active</option>
+                    <option value="2">Very least Active</option>
+                    <option value="3">lightly Active</option>
+                    <option value="4">Active</option>
+                    <option value="5">Very Active</option>
                 </select>
-                <h1>When were you born?</h1>
-                <input type="date" id="date">
-                <p>We use this information to calculate an accurate calorie goal for you.</p>
-                <button onclick="handleDetails()">CONTINUE</button>
+                <button onclick="handleActivity()">CONTINUE</button>
             </div>
         </div>
     </section>

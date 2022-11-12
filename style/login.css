@@ -80,6 +80,7 @@ form>input[type='submit'], form>button {
     margin: 20px 0px 8px;
     padding: 12px 20px;
     text-align: center;
+    cursor: pointer;
 }
 form>button{
     background: #4267b2;
