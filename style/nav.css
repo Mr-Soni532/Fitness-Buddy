@@ -155,7 +155,6 @@
 }
 .logedin>li:nth-child(8)>a, .logedin>li:nth-child(9)>a{
     border-right: none;
-
 }
 .logedin>li:nth-child(8) {
     max-width: 3%;
@@ -172,6 +171,7 @@
 }
 .logedin>li:nth-child(9)>a>img{
     width: 100%;
+
 }
 
 .logedin>li>img {
