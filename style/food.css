@@ -259,11 +259,24 @@ width: 50%;
 border-left: 1px solid #333333;
 padding-left: 30px;
 }
-.water_container>div:nth-child(2)>h4{
+.water_container>div:nth-child(2)>div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+}
+.water_container>div:nth-child(2)>div>h4{
     color: #333333;
     font-weight: 700;
     font-size: 18px;
     margin-bottom: 8px;
+}
+.water_container>div:nth-child(2)>div>button{
+    color: #0468aa;
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: 8px;
+    padding: 4px 6px;
 }
 .water_container>div:nth-child(2)>input{
     width: 100%;
@@ -271,6 +284,8 @@ padding-left: 30px;
     border: none;
     outline: 1px solid rgb(194, 192, 192);
     border-radius: 4px;
+   text-align: start;
+   padding-top: 0;
 }
 .water_container>div:nth-child(2)>input:focus{
     outline: 1px solid #0468aa;

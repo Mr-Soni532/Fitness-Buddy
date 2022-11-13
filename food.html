@@ -20,11 +20,10 @@
     <!-- --------Navbar------ -->
     <div class="container">
       <div class="nav loged">
-        <a class="logo ">
+        <a class="logo" href="home.html">
           <img src="Resource/Fitness_logo.png" alt="">
         </a>
         <ul class="logedin">
-
           <li id="username">Hi,<span id="username">Amiclone</span></li>
           <li><span class="material-symbols-outlined">
               mail
@@ -42,27 +41,27 @@
           </li>
           <li><a href="#">Help</a></li>
           <li><a href="#">Settings</a></li>
-          <li><a href="#">Log Out</a></li>
+          <li><a href="login.html">Log Out</a></li>
           <li>Follow Us:</li>
-          <li><img src="/Resource/facebook.png" alt=""></li>
-          <li><img src="/Resource/twitter.png" alt=""></li>
+          <li><a href="https://www.linkedin.com/in/bhupender-soni/" target="_blank"><img src="/Resource/linkedin.png" alt=""></a></li>
+                    <li><a href="https://www.linkedin.com/in/bhupender-soni/" target="_blank"><img src="/Resource/facebook.png" alt=""></a></li>
         </ul>
       </div>
   </section>
   <!-- --------Nav Menu------ -->
   <div class="nav_bar">
     <div class="container">
-      <div class="nav_menu">
-        <a href="home.html">HOME</a>
-        <a href="food.html">FOOD</a>
-        <a href="#">EXERCISE</a>
-        <a href="#">APPS</a>
-        <a href="#">COMMUNITY</a>
-        <a href="#">BLOG</a>
-        <a href="#">PREMIUM</a>
-      </div>
+        <div class="nav_menu">
+            <a href="home.html">HOME</a>
+            <a href="food.html">FOOD</a>
+            <a href="exercise.html">EXERCISE</a>
+            <a href="bmi.html">CHECK BMI</a>
+            <a href="#">COMMUNITY</a>
+            <a href="#">BLOG</a>
+            <a href="#">PREMIUM</a>
+        </div>
     </div>
-  </div>
+</div>
   <section id="main">
     <div class="container">
       <div class="food_table">
@@ -180,18 +179,21 @@
               <li id="add3">+3 cup</li>
             </ul>
             <h4>Add Custom</h4>
-            <input type="number">
+            <input type="number" id="glassCount">
             <span>cups</span>
-            <button>Add</button>
+            <button onclick="addGlass()">Add</button>
           </div>
           <div>
-            <h4><span id="count">1</span> cups</h4>
-            <img src="Resource/water_glass/empty.png" alt="">
+            <h4><span id="count">0</span> cups</h4>
+            <img src="Resource/water_glass/empty.png" alt="" id="glassImg">
           </div>
         </div>
         <div>
-          <h4>Today's Food Notes</h4>
-          <input type="textarea" size="">
+          <div>
+            <h4>Today's Food Notes</h4>
+            <button onclick="foodNote()">Add</button>
+          </div>
+          <input type="textarea" size="" id="foodNote" >
         </div>
       </div>
     </div>
