@@ -5,7 +5,9 @@
     padding: 0;
     font-family: 'Inter', sans-serif;
 }
-
+.active_nav{
+    background: #2373a8;
+}
 .container {
     width: 65%;
     height: 100%;
