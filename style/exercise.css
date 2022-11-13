@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 65%;
+    height: 100%;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+/* --------- main --------- */
+#main {
+    margin: 50px 0;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#input_container{
+    width: 40%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+.status_bar {
+    width: 100%;
+    margin: auto;
+    background: #134d74;
+    color: white;
+    padding: 10px;
+}
+
+.status_bar>h1 {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.exercise_input{
+    display: flex;
+    flex-direction: column;
+}
+input, select, .exercise_input>button{
+    padding: 15px 30px;
+    font-size: 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+    outline: 1px solid grey;
+} 
+.exercise_input>button{
+    background: #134d74;
+    color: white;
+}
+
+/* ----- invite -------- */
+#invite {
+    margin: 50px 0;
+}
+
+.invite_box {
+    width: 100%;
+    background: #f6f6f6;
+    ;
+    padding: 20px 50px;
+    text-align: center;
+}
+
+.invite_box>h1 {
+    font-size: 30px;
+    margin: 20px;
+}
+
+.invite_box>p {
+    color: #6d717a;
+}
+
+.invite_box>button {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    background: white;
+    border: none;
+    outline: 1px solid #6d717a36;
+    padding: 10px 30px;
+    margin-top: 20px;
+    color: #000000;
+    font-weight: 700;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.invite_box>button>span {
+    font-size: 45px;
+    padding-right: 20px;
+}
+
+#navigation-2 {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}

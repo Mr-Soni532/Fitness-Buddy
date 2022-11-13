@@ -6,13 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style/nav.css">
-  <!-- <link rel="stylesheet" href="style/home.css"> -->
+  <link rel="stylesheet" href="style/exercise.css">
   <link rel="stylesheet" href="style/footer.css">
-  <link rel="stylesheet" href="style/food.css">
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
+  <script src="script/nav.js" defer></script>
   <script src="script/exercise.js" defer></script>
-  <title>Add Food</title>
+  <title>Add Exercise</title>
 </head>
 
 <body>
@@ -20,11 +20,11 @@
     <!-- --------Navbar------ -->
     <div class="container">
       <div class="nav loged">
-        <a class="logo" href="home.html">
+        <a class="logo " href="home.html">
           <img src="Resource/Fitness_logo.png" alt="">
         </a>
         <ul class="logedin">
-          <li id="username">Hi,<span id="username">Amiclone</span></li>
+          <li>Hi,<span id="username">Amiclone</span></li>
           <li><span class="material-symbols-outlined">
               mail
             </span>
@@ -43,162 +43,47 @@
           <li><a href="#">Settings</a></li>
           <li><a href="login.html">Log Out</a></li>
           <li>Follow Us:</li>
-          <li><a href="https://www.linkedin.com/in/bhupender-soni/" target="_blank"><img src="/Resource/linkedin.png" alt=""></a></li>
-                    <li><a href="https://www.linkedin.com/in/bhupender-soni/" target="_blank"><img src="/Resource/facebook.png" alt=""></a></li>
+          <li><a href="https://www.linkedin.com/in/bhupender-soni/" target="_blank"><img src="/Resource/linkedin.png"
+                alt=""></a></li>
+          <li><a href="https://www.linkedin.com/in/bhupender-soni/" target="_blank"><img src="/Resource/facebook.png"
+                alt=""></a></li>
         </ul>
       </div>
   </section>
   <!-- --------Nav Menu------ -->
   <div class="nav_bar">
     <div class="container">
-        <div class="nav_menu">
-            <a href="home.html">HOME</a>
-            <a href="food.html">FOOD</a>
-            <a href="exercise.html">EXERCISE</a>
-            <a href="bmi.html">CHECK BMI</a>
-            <a href="#">COMMUNITY</a>
-            <a href="#">BLOG</a>
-            <a href="#">PREMIUM</a>
-        </div>
-    </div>
-</div>
-  <section id="main">
-    <div class="container">
-      <div class="food_table">
-        <table>
-          <thead>
-            <tr>
-              <th>Categories
-              </th>
-              <th>Calories<br><span>Kcal</span></th>
-              <th>Fat<br><span>g</span></th>
-              <th>Protein<br><span>g</span></th>
-              <th>Carbs<br><span>g</span></th>
-            </tr>
-          </thead>
-          <tbody id="addFoodTable">
-            <tr>
-              <td><span>Breakfast</span>
-                <input type="text" placeholder="Breakfast here" required id="breakfast">
-                <input type="number" placeholder="Quantity" required id="bQuantity" value="0" min="0" max="9"
-                  onKeyDown="return false">
-              </td>
-              <td id="bcalories">0</td>
-              <td id="bfat">0</td>
-              <td id="bprotein">0</td>
-              <td id="bcarbs">0</td>
-            </tr>
-            <tr>
-              <td><span>Lunch</span>
-                <input type="text" placeholder="Lunch here" required id="lunch">
-                <input type="number" placeholder="Quantity" required id="lQuantity" value="0" min="0" max="9"
-                  onKeyDown="return false">
-              </td>
-              <td id="lcalories">0</td>
-              <td id="lfat">0</td>
-              <td id="lprotein">0</td>
-              <td id="lcarbs">0</td>
-            </tr>
-            <tr>
-              <td><span>Dinner</span>
-                <input type="text" placeholder="Dinner here" required id="dinner">
-                <input type="number" placeholder="Quantity" required id="dQuantity" value="0" min="0" max="9"
-                  onKeyDown="return false">
-              </td>
-              <td id="dcalories">0</td>
-              <td id="dfat">0</td>
-              <td id="dprotein">0</td>
-              <td id="dcarbs">0</td>
-            </tr>
-            <tr>
-              <td><span>Snacks</span>
-                <input type="text" placeholder="Snacks here" required id="snacks">
-                <input type="number" placeholder="Quantity" required id="sQuantity" value="0" min="0" max="9"
-                  onKeyDown="return false">
-              </td>
-              <td id="scalories">0</td>
-              <td id="sfat">0</td>
-              <td id="sprotein">0</td>
-              <td id="scarbs">0</td>
-            </tr>
-          </tbody>
-        </table>
-        <div>
-          <div>
-            <p>Once You done with inputs, make sure to update the table.</p>
-            <button onclick="handleUpdate()">Update Table</button>
-          </div>
-          <table class="totalData">
-            <tbody>
-              <tr>
-                <td>Total</td>
-                <td id="tcalories">0</td>
-                <td id="tfat">0</td>
-                <td id="tprotein">0</td>
-                <td id="tcarbs">0</td>
-              </tr>
-              <tr>
-                <td>Your Daily Goal</td>
-                <td id="goal-calories">0</td>
-                <td id="goal-fat">0</td>
-                <td id="goal-protein">0</td>
-                <td id="goal-carbs">0</td>
-              </tr>
-              <tr>
-                <td>Remaining</td>
-                <td id="rcalories">0</td>
-                <td id="rfat">0</td>
-                <td id="rprotein">0</td>
-                <td id="rcarbs">0</td>
-              </tr>
-              <tr>
-                <th>Categories
-                </th>
-                <th>Calories<br><span>g</span></th>
-                <th>Fat<br><span>g</span></th>
-                <th>Protein<br><span>g</span></th>
-                <th>Carbs<br><span>g</span></th>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+      <div class="nav_menu">
+        <a href="home.html">HOME</a>
+        <a href="food.html">FOOD</a>
+        <a href="exercise.html">EXERCISE</a>
+        <a href="bmi.html">CHECK BMI</a>
+        <a href="#">COMMUNITY</a>
+        <a href="#">BLOG</a>
+        <a href="#">PREMIUM</a>
       </div>
     </div>
+  </div>
+  <section id="main">
     <div class="container">
-      <div class="water_container">
-        <div>
-          <div>
-            <h3>Water Consumption</h3>
-            <h4>Today's Water Total</h4>
-            <p>Aim to drink at least 8 cups of water today. You can quick add common sizes or enter a custom
-              amount.</p>
-            <h4>Quick Add</h4>
-            <ul id="quickAdd">
-              <li id="add1">+1 cup</li>
-              <li id="add2">+2 cup</li>
-              <li id="add3">+3 cup</li>
-            </ul>
-            <h4>Add Custom</h4>
-            <input type="number" id="glassCount">
-            <span>cups</span>
-            <button onclick="addGlass()">Add</button>
-          </div>
-          <div>
-            <h4><span id="count">0</span> cups</h4>
-            <img src="Resource/water_glass/empty.png" alt="" id="glassImg">
-          </div>
+      <div id="input_container">
+        <div class="status_bar">
+          <h1>Your Todays Status</h1>
         </div>
-        <div>
-          <div>
-            <h4>Today's Food Notes</h4>
-            <button onclick="foodNote()">Add</button>
-          </div>
-          <input type="textarea" size="" id="foodNote" >
+        <div class="exercise_input">
+          <select name="" id="exercise">
+            <option value="">Select Exercise</option>
+            <option value="10">Push up</option>
+            <option value="20">Pull up</option>
+            <option value="30">Jumping</option>
+            <option value="40">Squats</option>
+          </select>
+          <input type="number" min="1" max="1000" id="rep" placeholder="Number of Repetition">
+          <button onclick="addExercise()">Add Exercise</button>
         </div>
       </div>
     </div>
   </section>
-
   <!-- --------- footer --------` -->
   <section id="footer">
     <div class="container">
