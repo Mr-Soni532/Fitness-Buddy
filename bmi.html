@@ -6,13 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/nav.css">
-    <link rel="stylesheet" href="style/home.css">
+    <link rel="stylesheet" href="style/bmi.css">
     <link rel="stylesheet" href="style/footer.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
         <script src="script/nav.js" defer></script>
-        <script src="script/home.js" defer></script>
-    <title>Home</title>
+        <script src="script/bmi.js" defer></script>
+    <title>BMI Calculator</title>
 </head>
 
 <body>
@@ -52,10 +52,10 @@
     <div class="nav_bar">
         <div class="container">
             <div class="nav_menu">
-                <a href="home.html" class="active_nav">HOME</a>
+                <a href="home.html">HOME</a>
                 <a href="food.html">FOOD</a>
                 <a href="exercise.html">EXERCISE</a>
-                <a href="bmi.html">CHECK BMI</a>
+                <a href="bmi.html" class="active_nav">CHECK BMI</a>
                 <a href="#">COMMUNITY</a>
                 <a href="#">BLOG</a>
                 <a href="#">PREMIUM</a>
@@ -64,45 +64,30 @@
     </div>
     <section id="main">
         <div class="container">
-            <div class="status_bar">
-                <h1>Your Todays Status</h1>
+            <div class="bmi_bar">
+                <h1>Calculate Your Current BMI</h1>
             </div>
-            <div class="status_box">
-                <div class=status_top>
+            <div class="bmi_box">
+
+                <div class=bmi_top>
                     <div>
-                        <p>Calories Remaining</p>
-                        <h1 id="remaining_calories">2290</h1>
-                    </div>
-                    <div>
-                        <button><a href="exercise.html">Add Exercise</a></button>
-                        <button> <a href="food.html">Add Food</a></button>
-                    </div>
-                </div>
-                <div class="status_bottom">
-                    <div>
-                        <h2 id="goal_calories">2290</h2>
-                        <p>GOAL</p>
+                        <p>Your BMI Report</p>
+                        <h1 id="bmi_val">0</h1>
+                        <h3 id="bmi_status">status</h3>
                     </div>
                     <div>
-                        <h2 id="food_calories">0</h2>
-                        <p>FOOD</p>
+                        <div>
+                            <div>
+                                <label for="">Height</label>
+                                <input type="number" placeholder="Height in cm" id="height" min="70" max="200">
+                            </div>
+                            <div>
+                                <label for="">Weight</label>
+                                <input type="number" min="40" max="150" placeholder="Weight in kg" id="weight">
+                            </div>
+                        </div>
+                        <button id="cal" onclick="calCalories()">Calculate</button>
                     </div>
-                    <span>-</span>
-                    <div>
-                        <h2 id="exercise_calories">0</h2>
-                        <p>EXERCISE</p>
-                    </div>
-                    <span>=</span>
-                    <div>
-                        <h2 id="net_calories">0</h2>
-                        <p>NET</p>
-                    </div>
-                </div>
-                <div>
-                    <div class="progress">
-                        <div class="progress_bar"></div>
-                    </div>
-                    <h1><span id="progress">40</span>%</h1>
                 </div>
             </div>
         </div>
